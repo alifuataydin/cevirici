@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/incall_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@android:color/white"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/numberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#B0FFFFFF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#B0FFFFFF"
+        android:textSize="16sp" />
+
+    <Chronometer
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/otherCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#B0FFFFFF"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnSwap"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aramalar arasında geç"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/dtmfText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:visibility="gone" />
+
+    <GridLayout
+        android:id="@+id/dtmfPad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ongoingGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnMute"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Sessiz" />
+
+            <Button
+                android:id="@+id/btnSpeaker"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Hoparlör" />
+
+            <Button
+                android:id="@+id/btnHold"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Beklet" />
+
+            <Button
+                android:id="@+id/btnKeypad"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Tuşlar" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHangup"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="@color/call_red"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:contentDescription="Kapat"
+            app:cornerRadius="38dp"
+            app:icon="@drawable/ic_call_end"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="36dp"
+            app:iconTint="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/incomingGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReject"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="24dp"
+            android:backgroundTint="@color/call_red"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:contentDescription="Reddet"
+            app:cornerRadius="38dp"
+            app:icon="@drawable/ic_call_end"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="36dp"
+            app:iconTint="@android:color/white" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAnswer"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/call_green"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:contentDescription="Yanıtla"
+            app:cornerRadius="38dp"
+            app:icon="@drawable/ic_call"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="34dp"
+            app:iconTint="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>

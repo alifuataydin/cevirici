@@ -1,0 +1,6 @@
+<resources>
+    <color name="call_green">#1E9E4A</color>
+    <color name="call_red">#D93025</color>
+    <color name="brand">#1A5FB4</color>
+    <color name="incall_bg">#10151C</color>
+</resources>

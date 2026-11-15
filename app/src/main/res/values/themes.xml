@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.Cevirici" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/brand</item>
+    </style>
+    <style name="Theme.Cevirici.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand</item>
+    </style>
+</resources>
